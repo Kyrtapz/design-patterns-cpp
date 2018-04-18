@@ -1,6 +1,7 @@
-# design-patterns-cpp
-## Excersises for design patterns in modern c++ [course](https://www.udemy.com/patterns-cplusplus/).
+# Excersises for design patterns in modern c++ [course](https://www.udemy.com/patterns-cplusplus/).
 
+## [SOLID](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design))
+ 
 ### Builder
 - A separate component for building an object, can help avoiding huge constructors
 - Can be created by constructor or by returning it via a static function from the the that is being build
