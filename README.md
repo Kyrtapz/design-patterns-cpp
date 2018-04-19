@@ -13,3 +13,8 @@
 - **Factory method** - use a static member method(instead of a constructor) to create an object
 - **Factory** - separate component with factory methods, often done as inner class(**Inner Factory**)
 - **Abstract Factory**(*Factory Family*) - group several Factories that share an interface and use the abstract version to create objects, not common these days.
+
+### Prototype
+- Partially or fully constructed object that is going to be copied(cloned) and used(modified)
+- Important part is performing deep copy of the objects, serializers can be useful
+
