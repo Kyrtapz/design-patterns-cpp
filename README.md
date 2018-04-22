@@ -24,4 +24,7 @@
 - Boost DI can be used to create a singleton using Lifetime
 - **Monostone** - appears as a normal component but is based on static variables. Obviously dangerous, bad idea to use in most cases
 
-
+### Adapter
+- Getting the interface you want from the interface you have (Wall power adapter is a real world example)
+- Adapts existing interface to conform to the new one
+- **Caching adapter** - cashes temporary data, good ide to use when the data i generated several times with the same input
