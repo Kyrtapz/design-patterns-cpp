@@ -18,3 +18,10 @@
 - Partially or fully constructed object that is going to be copied(cloned) and used(modified)
 - Important part is performing deep copy of the objects, serializers can be useful
 
+### Singleton
+- A component which is instantiated only once
+- Hard to unit-test when used in a different component, it can be resolved with Dependency Injection
+- Boost DI can be used to create a singleton using Lifetime
+- **Monostone** - appears as a normal component but is based on static variables. Obviously dangerous, bad idea to use in most cases
+
+
