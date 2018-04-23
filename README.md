@@ -28,3 +28,16 @@
 - Getting the interface you want from the interface you have (Wall power adapter is a real world example)
 - Adapts existing interface to conform to the new one
 - **Caching adapter** - cashes temporary data, good ide to use when the data i generated several times with the same input
+
+### Bridge
+- Connects components through abstractions
+- Prevents ***Cartesian product*** complexity explosion(Example: ThreadSched can be preemptive/Cooperative and run on Linux/Windows which equals to 4 different components)
+- Decouples an interface from an implementation
+- **Pimpl idiom** - Implementation of class methods are moved to another class(pointer to the implementation is stored in the class and then used in the methods instead of the actual logic). Hides implementation details. Not used so often nowdays.
+
+### Composite
+- Treat individual and aggregate objects in the same way
+- **Composite** - A mechanism for treating individual(scalar) objects and compositions of object in the same way 
+- [CRTP - Curiously recurring template pattern](https://en.wikipedia.org/wiki/Curiously_recurring_template_pattern)
+- Array-Backed properties - Array indexed by enum that makes it easier to work on aggregated properties
+
