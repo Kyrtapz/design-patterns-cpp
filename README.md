@@ -41,3 +41,11 @@
 - [CRTP - Curiously recurring template pattern](https://en.wikipedia.org/wiki/Curiously_recurring_template_pattern)
 - Array-Backed properties - Array indexed by enum that makes it easier to work on aggregated properties
 
+### Decorator
+- Adding behaviour without altering the class itself(add functionality to already existing element without modifying it)
+- Add a wrapper class that keeps the reference of the element or derive from it
+- **Dynamic decorator** - use base class element as a reference, it is dynamic since it is created at runtime. It is possible do decorate a decorator.
+- **Static decorator** - Derive from the decorated class, better to use when it is known what specific class we are going to decorate. Defined at compile time.
+- **Function decorator** - decorate a function
+
+
