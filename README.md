@@ -48,4 +48,14 @@
 - **Static decorator** - Derive from the decorated class, better to use when it is known what specific class we are going to decorate. Defined at compile time.
 - **Function decorator** - decorate a function
 
+### Facade
+- Expose several components through a single interface(example: House that has electricity, plumbing, etc.)
+- Build a simpler API that manages several classes to achieve a specific scenario
+- Expose underlying components to be used by power users
+
+
+### Flyweight
+- Avoid redundancy when storing data
+- Space optimization technique that allows for using less memory by storing externally the data that is associated with similiar objects
+- Boost.Flyweight is a valid solution for most use cases(example: flyweight<string>)
 
