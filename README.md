@@ -82,3 +82,10 @@
 - **Composite command** - Use Composite pattern to execute several commands at once(example: a Macro in Microsoft office macros)
 - **Query** - in terms of a design pattern meaning it is covered by Command design pattern. Query is typically not modifying the data while the command is. Command Query Separation (CQS)
 
+### Interpreter
+- Not exactly a design pattern, examples: programming languages, IDEs, interpreters, HTML etc.
+- Interprets text input to objects
+- Component that processes structured text data. Does so by turning it into separate lexical tokens(lexing) and then interpreting sequences of said tokens.
+- Boost.Spirit is a library that helps with building a parser with predefined template
+
+
