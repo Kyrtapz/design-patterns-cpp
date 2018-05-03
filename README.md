@@ -27,7 +27,7 @@
 ### Adapter
 - Getting the interface you want from the interface you have (Wall power adapter is a real world example)
 - Adapts existing interface to conform to the new one
-- **Caching adapter** - cashes temporary data, good ide to use when the data i generated several times with the same input
+- **Caching adapter** - cashes temporary data, good idea to use when the data is generated several times with the same input
 
 ### Bridge
 - Connects components through abstractions
@@ -58,4 +58,27 @@
 - Avoid redundancy when storing data
 - Space optimization technique that allows for using less memory by storing externally the data that is associated with similiar objects
 - Boost.Flyweight is a valid solution for most use cases(example: flyweight<string>)
+
+### Proxy
+- An interface for accessing a particular resource with the same APIs that underlying resource presents(Same interface, different behaviour)
+- A class that functions as an interface to a particular resource. That resource may be remote, expensive to construct, or may require logging or some other added functionality
+- **Smart pointer** is an example of proxy - can be used as a normal pointer but does more than a plain pointer
+- **Property** is another example of a proxy, hide a value behind getter and setter (overloading assignment and get operator)
+- **Virtual proxy** - can be used for lazy loading, doesn't do things when called but later when they are needed. For instance opens a file not when open was called but when read from file was.
+- **Communication proxy** - caller doesn't know if it calls a local resource or remote one
+- There is a lot of different proxy types that can be used
+- **Proxy vs Decorator** - Proxy provides identical interface while decorator provides an enhanced interface
+- **Proxy vs Decorator** - Decorator typically aggregates the underlying object(reference/inheritance) while can just mimic the APIs
+- **Proxy vs Decorator** - Proxy might not even create any object
+
+### Chain of responsibility
+- A chain of components who all get a chance to process a command or a query, optionally having default processing implementation and an ability to terminate the processing chain
+- **Single linked list** - not used these days, create events using single linked lists and call next handler when invoking yours
+- **Broker chain** - Use centralized list(boost signal is useful here) instead of chaining
+
+### Command
+- Wrap a command with an object to be able to record and reverse actions
+- Encapsulate all details of an operation in a separate object
+- **Composite command** - Use Composite pattern to execute several commands at once(example: a Macro in Microsoft office macros)
+- **Query** - in terms of a design pattern meaning it is covered by Command design pattern. Query is typically not modifying the data while the command is. Command Query Separation (CQS)
 
