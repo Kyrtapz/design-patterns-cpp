@@ -57,7 +57,7 @@
 ### Flyweight
 - Avoid redundancy when storing data
 - Space optimization technique that allows for using less memory by storing externally the data that is associated with similiar objects
-- Boost.Flyweight is a valid solution for most use cases(example: flyweight<string>)
+- Boost.Flyweight is a valid solution for most use cases(example: flyweight`<string>`)
 
 ### Proxy
 - An interface for accessing a particular resource with the same APIs that underlying resource presents(Same interface, different behaviour)
