@@ -88,4 +88,32 @@
 - Component that processes structured text data. Does so by turning it into separate lexical tokens(lexing) and then interpreting sequences of said tokens.
 - Boost.Spirit is a library that helps with building a parser with predefined template
 
+### Iterator
+- Typically a class that is responsible for items traversal(Keeps reference to the current element and knows how to move to a different one)
+- An object which facilitates the traversal of a data structure
+- [Coroutines](https://lewissbaker.github.io/2017/09/25/coroutine-theory)
+- Boost iterator Facade enables easier iterator implementation
+
+### Mediator
+- A component that facilitates communication between other components without them necessarily being aware of each other or having a direct(reference) access to each other(Classic example is a chat room)
+- A central component that glues other components that are not aware of each other. Typically all components has a reference to the mediator instance
+- **Event broker** allows for a central events processing (Boost signals2 is helpful here)
+
+### Memento
+- A token/handle representing the system state. Lets us roll back to the state when the token was generated. May or may not directly expose state information.
+- Enables to take a snapshot on an objects state
+
+### Observer
+- Observer provides a way of subscribing to an event(performs subscription)
+- Observable implementation is always intrusive(implementation change is required), observer doesn't need to be
+- Multi-threaded/re-entrant use can cause issues(for instance calling unsubscribe in notify)
+- Observer/Observable = Subscriber/Event = Signal/Slot
+- Boost.Signals library implements signal/slots
+
+### State
+- A pattern in which the object's behaviour is determined by its state. An object transitions from one state to another(something needs to trigger a transition)
+- A formalized construct which manages state and transitions is called a state machine.
+- Classic State design pattern implementation is no longer used, it is complicated, inefficient and quite bizarre
+- Boost.MSM (Meta state machine) - One of boosts state machine library that helps building state machines
+
 
