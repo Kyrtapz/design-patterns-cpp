@@ -116,4 +116,22 @@
 - Classic State design pattern implementation is no longer used, it is complicated, inefficient and quite bizarre
 - Boost.MSM (Meta state machine) - One of boosts state machine library that helps building state machines
 
+### Strategy
+- Enable the exact behaviour of a system to be selected either at run-time(dynamic) or compile-time(static). Also known as a policy(C++).
+- Define algorithm at high level, define the interface each strategy should follow, provide either dynamic or static composition of strategy in the overall algorithm
+
+### Template Method
+- Provide a high-level blueprint for an algorithm to be completed by inheritors
+- Allows us to define the 'skeleton' of the algorithm in the base class, with concrete implementations defined in subclasses
+- Similar to Strategy pattern but here the algorithm is implemented in the base class but it is using methods that are defined by inheritors
+
+### Visitor
+- A pattern where a component(visitor) is allowed to traverse the entire inheritance hierarchy
+- Implemented by propagating a single visit() method throughout the entire hierarchy
+- **Intrusive visitor** - Break open close principle. Introduce a visitor method in the base class and implement it through the hierarchy
+- **Reflective visitor** - Introduce a new structure that handles the visitor functionality. Using dynamic_cast(takes time at runtime) to determine the type and use appropriate visitor. This approach isn't generic, need to handle every type in the hierarchy separately.
+- **Classic visitor([Double dispatch](https://en.wikipedia.org/wiki/Double_dispatch))** - extend hierarchy functionality without introducing hierarchy code changes. 
+- **Acyclic visitor** - TBA
+- **Multimethods** - TBA
+- **std::variant** requires implementing a specific type of a visitor to get the value
 
